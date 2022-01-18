@@ -1,2 +1,8 @@
 api/bin
 api/obj
+core/bin
+core/obj
+tests/bin
+tests/obj
+.fake
+.ionide

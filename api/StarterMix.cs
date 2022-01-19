@@ -18,7 +18,7 @@ namespace api
         //     Water, 
         //     Salt = 0);
 
-        public double Hydration => Ingredients.Hydration(starter: 0, starterHydration: 0, water: Water, flour: Flour);
+        public double Hydration => Ingredients.NewStarter(Water, Flour);
 
         // volume in milliliters
         public int Volume { get; set; }

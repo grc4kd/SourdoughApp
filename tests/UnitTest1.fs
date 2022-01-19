@@ -10,7 +10,7 @@ let Setup () = ()
 
 [<Test>]
 let EqualityTestsWithTolerance () =
-    let testIngredientsActual = Components 289 1 0.68 1000
+    let testIngredientsActual = Components 289.0 1.0 0.68 1000.0
     Assert.AreEqual(450.73, testIngredientsActual.Flour, 0.01)
 
     Assert.That(
@@ -37,7 +37,7 @@ let RunNormalTests () =
             .Within(0.000001)
     )
 
-    let testIngredientsActual = Components 289 1 0.68 1000
+    let testIngredientsActual = Components 289.0 1.0 0.68 1000.0
 
     Assert.That(
         289,
@@ -69,4 +69,4 @@ let RunNormalTests () =
 
 [<Test>]
 let NewStarterTest () =
-    Assert.AreEqual(100, Hydration 0 100 100 0)
+    Assert.AreEqual(100, Hydration 0.0 100.0 100.0 0.0)

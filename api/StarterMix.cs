@@ -1,3 +1,5 @@
+using static Ingredients;
+
 namespace api;
 
 public class StarterMix

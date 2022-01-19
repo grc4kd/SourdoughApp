@@ -1,5 +1,5 @@
-namespace api;
 
+namespace WebApplication1;
 public class WeatherForecast
 {
     public DateTime Date { get; set; }

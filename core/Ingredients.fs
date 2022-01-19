@@ -9,11 +9,14 @@ type Ingredients =
     }
 
 let Hydration starter starterHydration water flour =
-    let sD = starter / (starterHydration + 1.0)
-    let sW = (starterHydration * starter) / (starterHydration + 1.0)
-    let wet = sW + water
-    let dry = sD + flour
-    wet / dry
+    match starter with
+    | 0.0 -> water / flour
+    | _ ->
+        let sD = starter / (starterHydration + 1.0)
+        let sW = (starterHydration * starter) / (starterHydration + 1.0)
+        let wet = sW + water
+        let dry = sD + flour
+        wet / dry
 
 let Components starter starterHydration desiredHydration desiredMass =
     let sD = starter / (starterHydration + 1.0)

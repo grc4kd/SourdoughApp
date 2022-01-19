@@ -1,4 +1,5 @@
 namespace api;
+
 public class StarterMix
 {
     // water as mass in grams
@@ -16,6 +17,8 @@ public class StarterMix
     //     Flour, 
     //     Water, 
     //     Salt = 0);
+
+    public float Hydration => (float)Ingredients.Hydration(0, Flour, Water, 0);
 
     // volume in milliliters
     public int Volume { get; set; }

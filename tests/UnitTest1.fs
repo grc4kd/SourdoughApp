@@ -29,7 +29,7 @@ let EqualityTestsWithTolerance () =
     Assert.That(5999999999UL, Is.EqualTo(6000000000UL).Within(5UL))
 
 [<Test>]
-let RunTests () =
+let RunNormalTests () =
     Assert.That(
         0.68,
         Is
@@ -66,3 +66,7 @@ let RunTests () =
             .EqualTo(testIngredientsActual.Salt)
             .Within(0.000001)
     )
+
+[<Test>]
+let NewStarterTest () =
+    Assert.AreEqual(100, Hydration 0 100 100 0)

@@ -6,3 +6,5 @@ tests/bin
 tests/obj
 .fake
 .ionide
+.vs
+.vscode

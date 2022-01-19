@@ -18,7 +18,7 @@ namespace api
         //     Water, 
         //     Salt = 0);
 
-        public float Hydration => (float)Ingredients.Hydration(0, Flour, Water, 0);
+        public double Hydration => Ingredients.Hydration(starter: 0, starterHydration: 0, water: Water, flour: Flour);
 
         // volume in milliliters
         public int Volume { get; set; }
@@ -27,7 +27,7 @@ namespace api
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-        public string Summary { get; set; }
+        public string Status { get; set; }
     }
 
 }

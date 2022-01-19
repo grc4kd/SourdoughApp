@@ -69,4 +69,4 @@ let RunNormalTests () =
 
 [<Test>]
 let NewStarterTest () =
-    Assert.AreEqual(100, Hydration 0.0 100.0 100.0 0.0)
+    Assert.AreEqual(1, Hydration 0.0 0.0 100.0 100.0)

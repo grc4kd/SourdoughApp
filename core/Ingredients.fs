@@ -1,4 +1,4 @@
-module Ingredients
+﻿module Ingredients
 
 type Ingredients =
     {

@@ -26,7 +26,7 @@ namespace api.Controllers
         public IEnumerable<StarterMix> Get()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new StarterMix
+            return Enumerable.Range(1, 100).Select(index => new StarterMix
             {
                 Water = rng.Next(1, 100),
                 Flour = rng.Next(1, 100),

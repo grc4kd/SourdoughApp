@@ -4,7 +4,7 @@ import { Hydration } from '../hydration';
 @Component({
   selector: 'app-hydration',
   templateUrl: './hydration.component.html',
-  styleUrls: ['./hydration.component.sass']
+  styleUrls: ['./hydration.component.css']
 })
 export class HydrationComponent implements OnInit {
   hydration: Hydration = {

@@ -22,9 +22,11 @@ let Components starter starterHydration desiredHydration desiredMass =
     let sD = starter / (starterHydration + 1.0)
     let sW = (starterHydration * starter) / (starterHydration + 1.0)
     let flour = (desiredMass - sD - (desiredHydration * sD)) / (desiredHydration + 1.0)
+    let water = desiredMass - flour - starter
+    let salt = (desiredMass * 0.909090) / 100.0
     {
         Starter = starter
-        Water = desiredMass - sD - sW - flour
+        Water = water
         Flour = flour
-        Salt = (desiredMass * 0.909090) / 100.0
+        Salt = salt
     }

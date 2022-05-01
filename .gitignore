@@ -9,3 +9,4 @@ tests/obj
 .ionide
 .vs
 .vscode
+TestResults/

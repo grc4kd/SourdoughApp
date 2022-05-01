@@ -1,6 +1,7 @@
 module tests
 
 open NUnit.Framework
+open FSharp.Data.UnitSystems.SI.UnitSymbols
 
 // Open the Ingredients library under test.
 open Ingredients
@@ -79,3 +80,17 @@ let ExtremeHydrationTest () =
 
     let hydration: float = Hydration starter starterHydration water flour
     Assert.That(hydration, Is.EqualTo(0.894201).Within(0.000001))
+
+[<Test>]
+let ConvertGramstoKilogramsTest () =
+    let grams = 2000.0<g>
+
+    Assert.That(ConvertGramsToKilograms(grams), Is.EqualTo(2<kg>))
+
+    let grams = 2.0<g>
+
+    Assert.That(ConvertGramsToKilograms(grams), Is.EqualTo(0.002<kg>))
+
+    let grams = 2342423454242.0<g>
+
+    Assert.That(ConvertGramsToKilograms(grams), Is.EqualTo(2342423454.242<kg>))

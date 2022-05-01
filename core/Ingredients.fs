@@ -9,7 +9,7 @@ type g
 let gramsPerKilogram: float<g kg^- 1> = 1000.0<g/kg>
 
 // Define conversion functions.
-let convertGramsToKilograms (x: float<g>) = x / gramsPerKilogram
+let ConvertGramsToKilograms (x: float<g>) = x / gramsPerKilogram
 
 
 type Ingredients =

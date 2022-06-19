@@ -20,8 +20,6 @@ namespace api
 
         public float TemperatureF => TemperatureC * 9 / 5 + 32;
 
-        public float TempratureK => TemperatureC * 273.15f;
-
         public string Status { get; set; }
     }
 

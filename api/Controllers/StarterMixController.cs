@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using api.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -23,10 +24,12 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<StarterMix> Get()
+        public IEnumerable<SourdoughStarterMix> Get()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 100).Select(index => new StarterMix
+            _logger.LogDebug("Seeded random number generator {rng}", rng);
+
+            return Enumerable.Range(1, 100).Select(index => new SourdoughStarterMix
             {
                 Water = rng.Next(1, 100),
                 Flour = rng.Next(1, 100),

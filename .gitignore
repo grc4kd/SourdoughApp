@@ -5,6 +5,8 @@ core/bin
 core/obj
 tests/bin
 tests/obj
+tests_api/bin
+tests_api/obj
 .fake
 .ionide
 .vs

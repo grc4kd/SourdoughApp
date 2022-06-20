@@ -23,5 +23,13 @@ namespace tests_api
                 Assert.That(tempF, Is.EqualTo(starterMix.TemperatureC * 9 / 5 + 32));
             });
         }
+
+        [Test]
+        public void StarterMix_SetMassUnderZero_NoEffect()
+        {
+            var initialMass = starterMix.Mass;
+            starterMix.Mass = -123;
+            Assert.That(starterMix.Mass, Is.EqualTo(initialMass));
+        }
     }
 }

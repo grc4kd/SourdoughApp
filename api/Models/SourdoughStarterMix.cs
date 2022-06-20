@@ -9,7 +9,18 @@ namespace api.Models
         public int Flour;
 
         // total mass in grams
-        public int Mass() => Water + Flour;
+        public int Mass
+        {
+            get { return Water + Flour; }
+            set
+            {
+                if (value < 0) return;
+                else
+                {
+                    Water = value;
+                }
+            }
+        }
 
         public double Hydration() => Ingredients.NewStarter(Water, Flour);
 

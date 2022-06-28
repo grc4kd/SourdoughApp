@@ -1,23 +1,15 @@
 ﻿module Ingredients
 
-open FSharp.Data.UnitSystems.SI.UnitSymbols
 // Mass, grams.
 [<Measure>]
 type g
 
-// Define conversion constants.
-let gramsPerKilogram: float<g kg^- 1> = 1000.0<g/kg>
-
-// Define conversion functions.
-let ConvertGramsToKilograms (x: float<g>) = x / gramsPerKilogram
-
-
 type Ingredients =
     {
-        Starter : float
-        Water : float
-        Flour : float
-        Salt : float
+        Starter : float<g>
+        Water : float<g>
+        Flour : float<g>
+        Salt : float<g>
     }
 
 let NewStarter water flour : float =
@@ -30,10 +22,10 @@ let Hydration (starter: float<g>) starterHydration (water: float<g>) (flour: flo
     let dry: float<g> = sD + flour
     wet / dry
 
-let Components starter starterHydration desiredHydration desiredMass =
-    let sD = starter / (starterHydration + 1.0)
-    let sW = (starterHydration * starter) / (starterHydration + 1.0)
-    let flour = (desiredMass - sD - (desiredHydration * sD)) / (desiredHydration + 1.0)
+let Components (starter: float<g>) starterHydration desiredHydration (desiredMass: float<g>) =
+    let sD: float<g> = starter / (starterHydration + 1.0)
+    let hydrationComponent: float<g> = desiredHydration * sD
+    let flour: float<g> = (desiredMass - sD - hydrationComponent) / (desiredHydration + 1.0)
     let water = desiredMass - flour - starter
     let salt = (desiredMass * 0.909090) / 100.0
     {

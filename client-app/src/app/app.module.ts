@@ -6,15 +6,9 @@ import { AppComponent } from './app.component';
 import { HydrationComponent } from './hydration/hydration.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HydrationComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, HydrationComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

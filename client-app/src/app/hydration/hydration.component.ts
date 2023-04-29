@@ -5,9 +5,8 @@ import { HydrationMock } from './hydration.mock';
 @Component({
   selector: 'app-hydration',
   templateUrl: './hydration.component.html',
-  styleUrls: ['./hydration.component.css']
+  styleUrls: ['./hydration.component.css'],
 })
-
 export class HydrationComponent implements OnInit {
   hydration: Hydration;
 
@@ -15,7 +14,5 @@ export class HydrationComponent implements OnInit {
     this.hydration = HydrationMock.MockObject;
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 }

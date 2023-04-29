@@ -8,9 +8,8 @@ describe('HydrationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HydrationComponent ]
-    })
-    .compileComponents();
+      declarations: [HydrationComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

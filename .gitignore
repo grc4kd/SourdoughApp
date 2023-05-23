@@ -12,17 +12,3 @@ tests_api/obj
 .vs
 .vscode
 TestResults/
-/Domain/bin/Debug/net7.0/Domain.deps.json
-/Domain/bin/Debug/net7.0/Domain.dll
-/Domain/bin/Debug/net7.0/Domain.pdb
-/Domain/bin/Debug/net7.0/Domain.xml
-/Domain/obj/Debug/net7.0/Domain.fsproj.AssemblyReference.cache
-/Domain/obj/Debug/net7.0/ref/Domain.dll
-/Domain/obj/Debug/net7.0/refint/Domain.dll
-/Domain/obj/Debug/net7.0/Domain.AssemblyInfo.fs
-/Domain/obj/Debug/net7.0/Domain.AssemblyInfoInputs.cache
-/Domain/obj/Debug/net7.0/Domain.assets.cache
-/Domain/obj/Debug/net7.0/Domain.dll
-/Domain/obj/Debug/net7.0/Domain.fsproj.FileListAbsolute.txt
-/Domain/obj/Debug/net7.0/Domain.pdb
-/Domain/obj/Debug/net7.0/Domain.xml

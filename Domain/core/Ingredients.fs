@@ -1,8 +1,6 @@
 ﻿module Ingredients
 
-// Mass, grams.
-[<Measure>]
-type g
+open mass
 
 type Ingredients =
     {
@@ -14,13 +12,6 @@ type Ingredients =
 
 let NewStarter water flour : float =
     water / flour
-
-let Hydration (starter: float<g>) starterHydration (water: float<g>) (flour: float<g>) =
-    let sD: float<g> = starter / (starterHydration + 1.0)
-    let sW: float<g> = (starterHydration * starter) / (starterHydration + 1.0)
-    let wet: float<g> = sW + water
-    let dry: float<g> = sD + flour
-    wet / dry
 
 let Components (starter: float<g>) starterHydration desiredHydration (desiredMass: float<g>) =
     let sD: float<g> = starter / (starterHydration + 1.0)

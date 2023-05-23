@@ -1,14 +1,11 @@
 module tests
 
 open NUnit.Framework
-open FSharp.Data.UnitSystems.SI.UnitSymbols
 
 // Open the Ingredients library under test.
 open Ingredients
-
-// Import unit of measure from Ingredients module.
-[<Measure>]
-type g = Ingredients.g
+open mass
+open BakersHydration
 
 [<SetUp>]
 let Setup () = ()

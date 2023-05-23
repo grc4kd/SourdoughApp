@@ -1,0 +1,13 @@
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\bin\Debug\net7.0\Domain.xml
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\obj\Debug\net7.0\Domain.fsproj.AssemblyReference.cache
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.fs
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\obj\Debug\net7.0\Domain.fsproj.CoreCompileInputs.cache
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\obj\Debug\net7.0\Domain.xml
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Users\griff\Source\Repos\grc4kd\SourdoughApp\Domain\obj\Debug\net7.0\ref\Domain.dll

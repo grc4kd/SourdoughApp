@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\griff\\Source\\Repos\\grc4kd\\SourdoughApp\\Domain\\domain.fsproj": {}
+    "C:\\Users\\griff\\Source\\Repos\\grc4kd\\SourdoughApp\\domain\\domain.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\griff\\Source\\Repos\\grc4kd\\SourdoughApp\\Domain\\domain.fsproj": {
+    "C:\\Users\\griff\\Source\\Repos\\grc4kd\\SourdoughApp\\domain\\domain.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\griff\\Source\\Repos\\grc4kd\\SourdoughApp\\Domain\\domain.fsproj",
+        "projectUniqueName": "C:\\Users\\griff\\Source\\Repos\\grc4kd\\SourdoughApp\\domain\\domain.fsproj",
         "projectName": "domain",
-        "projectPath": "C:\\Users\\griff\\Source\\Repos\\grc4kd\\SourdoughApp\\Domain\\domain.fsproj",
+        "projectPath": "C:\\Users\\griff\\Source\\Repos\\grc4kd\\SourdoughApp\\domain\\domain.fsproj",
         "packagesPath": "C:\\Users\\griff\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\griff\\Source\\Repos\\grc4kd\\SourdoughApp\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\griff\\Source\\Repos\\grc4kd\\SourdoughApp\\domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\griff\\AppData\\Roaming\\NuGet\\NuGet.Config",

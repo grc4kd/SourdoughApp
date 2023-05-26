@@ -1,4 +1,4 @@
-namespace api.Models
+namespace api.models
 {
     public class SourdoughStarterMix : IStarterMix
     {
@@ -22,7 +22,7 @@ namespace api.Models
             }
         }
 
-        public double Hydration() => Ingredients.NewStarter(Water, Flour);
+        public double Hydration() => domain.models.NewStarter(Water, Flour);
 
         // volume in milliliters
         public int Volume { get; set; }

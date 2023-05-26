@@ -3,24 +3,20 @@ module tests
 open NUnit.Framework
 
 // Open the Ingredients library under test.
-open Ingredients
-open mass
+open domain.models
+open units.mass
 open BakersHydration
 
-[<SetUp>]
-let Setup () = ()
-
-// for posterity's sake, these are the previously defined tests
-// I will be re-implementing the code that satisfies these test dependencies
-// and the functionality under test
 [<Test>]
 let PlainHydrationTest () =
     let starter: float<g> = 289.0<g>
-    let starterHydration: float = 1.00  // baker's math, 1 part flour : 1 part water => 100% == 1.00
+    // 1 part flour : 1 part water = 1.00
+    let starterHydration: float = 1.00
     let water: float<g> = 260.261905<g>
     let flour: float<g> = 450.738095<g>
 
     Assert.That(Hydration starter starterHydration water flour, Is.EqualTo(0.68).Within(0.000001))
+    Assert.That(Hydration 289.0<g> 1.0 260.0<g> 450.0<g>, Is.EqualTo(0.68).Within(0.000001))
 
 [<Test>]
 let PlainComponentsTest () =
@@ -41,20 +37,23 @@ let PlainComponentsTest () =
 let NewStarterTest () =
     Assert.AreEqual(1, NewStarter 100.0 100.0)
 
-// Ingredients for two large loaves: 
-// 420 g active sourdough starter with 100% hydration made
-// 730 g bread flour, 225 g all-purpose flour
-// 620 g water + 40g to be added when you put
-// 100 g salt to add when you make the folds (but look at your dough before you add it); 20 grams of sea salt. 
-// In total hydration was about 85%.
-
+(*
+Example Recipe
+Ingredients for two large loaves: 
+  420 g active sourdough starter with 100% hydration made
+  730 g bread flour, 225 g all-purpose flour
+  620 g water + 40g to be added when you put
+  100 g salt to add when you make the folds (but look at your dough before you add it); 20 grams of sea salt. 
+  In total hydration was about 85%.
+*)
 [<Test>]
 let ExtremeComponentTest () =
-    let starter = 420.0<g> // 420 g active sourdough starter
+    let starter = 420.0<g>
     let starterHydration = 1.00 // with 100% hydration
     let desiredHydration = 0.86254295532646053 // total hydration was about 85%
-    let desiredMass = 2155.0<g> // 420+730+225+620+40+100+20
-    // salt is always 90.90909% of total mass / 100 g
+    let desiredMass = 420.0<g> + 730.0<g> + 225.0<g> + 620.0<g> + 40.0<g> + 100.0<g> + 20.0<g>
+
+    // constant for salt, 90.90909% of total mass / 100 g
 
     let testIngredientsActual =
         Components starter starterHydration desiredHydration desiredMass

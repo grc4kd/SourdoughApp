@@ -1,4 +1,4 @@
-using api.Models;
+using api.models;
 
 namespace tests_api
 {

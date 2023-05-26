@@ -9,7 +9,9 @@
   <ItemGroup>
     <Compile Include="units\mass.fs" />
     <Compile Include="formulas\BakersHydration.fs" />
-    <Compile Include="core\Ingredients.fs" />
+    <Compile Include="models\Bread.fs" />
+    <Compile Include="models\Ingredients.fs" />
+    <Compile Include="abstractions\IBreadRepository.fs" />
   </ItemGroup>
 
   <ItemGroup>

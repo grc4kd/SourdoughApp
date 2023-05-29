@@ -8,9 +8,9 @@ import { MatTabsModule } from '@angular/material/tabs';
  * @title Basic use of the tab nav bar
  */
 @Component({
-  selector: 'tab-nav-bar-basic-example',
-  templateUrl: 'tab-nav-bar-basic-example.html',
-  styleUrls: ['tab-nav-bar-basic-example.css'],
+  selector: 'app-standard-recipe-component',
+  templateUrl: 'standard-recipe.component.html',
+  styleUrls: ['standard-recipe.component.css'],
   standalone: true,
   imports: [MatTabsModule, NgFor, MatButtonModule],
 })

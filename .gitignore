@@ -6,8 +6,8 @@
 /core/application/obj
 /core/domain/bin
 /core/domain/obj
-/database/obj
 /database/bin
+/database/obj
 /webapi/bin
 /webapi/obj
 api/.config
@@ -16,9 +16,9 @@ api/obj
 domain/bin
 domain/obj
 TestResults/
-tests/bin
-tests/obj
 tests_api/bin
 tests_api/obj
-Test_application/bin
-Test_application/obj
+tests_application/bin
+tests_application/obj
+tests_core/bin
+tests_core/obj

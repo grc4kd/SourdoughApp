@@ -1,8 +1,8 @@
-﻿namespace domain
+﻿namespace domain.models
 
-open units.mass
+open domain.units.Mass
 
-module models =
+module Recipe =
     type Ingredients =
         {
             Starter : float<g>

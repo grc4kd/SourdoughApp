@@ -13,7 +13,7 @@ namespace application.breads.commands.CreateBread
 
         public Task<Guid> Handle(CreateBreadCommand request, CancellationToken cancellationToken)
         {
-            var bread = domain.models.NewStarter
+            var bread = new domain.models.Bread("Pablo");
 
             breadRepository.Insert(bread);
              

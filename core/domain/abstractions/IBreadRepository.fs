@@ -1,6 +1,6 @@
 ﻿namespace domain
 
-open models
+open domain.models
 
 module abstractions =
     type IBreadRepository =

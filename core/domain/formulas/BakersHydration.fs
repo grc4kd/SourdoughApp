@@ -1,6 +1,6 @@
 ﻿namespace domain
 
-open units.mass
+open units.Mass
 
 module formulas =
     let Hydration (starter: float<g>) starterHydration (water: float<g>) (flour: float<g>) =

@@ -22,7 +22,7 @@ namespace api.models
             }
         }
 
-        public double Hydration() => domain.models.NewStarter(Water, Flour);
+        public double Hydration() => domain.models.Recipe.NewStarter(Water, Flour);
 
         // volume in milliliters
         public int Volume { get; set; }

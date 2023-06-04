@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapi", "webapi\webapi.csproj", "{F9BBD7D7-907C-4CCF-956D-6A89D48739EA}"
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "tests_core", "tests\tests_core.fsproj", "{36EDA744-D4D8-4068-9553-BFF3A68E56F9}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "tests_core", "tests_core\tests_core.fsproj", "{36EDA744-D4D8-4068-9553-BFF3A68E56F9}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "domain", "core\domain\domain.fsproj", "{B67906E7-5131-4CB1-8BAB-0D55A255F059}"
 EndProject
@@ -24,7 +24,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "application", "core\applica
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "database", "database\database.csproj", "{1D655034-A715-4E1D-B3B6-FCF6417193F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_application", "Test_application\Test_application.csproj", "{6778452E-6F8A-4F24-B056-31CF32806EC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tests_application", "tests_application\tests_application.csproj", "{6778452E-6F8A-4F24-B056-31CF32806EC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

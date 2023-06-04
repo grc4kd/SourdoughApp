@@ -1,6 +1,6 @@
-﻿namespace units
+﻿namespace domain.units
 
-module mass =
+module Mass =
     // Mass, grams.
     [<Measure>]
     type g

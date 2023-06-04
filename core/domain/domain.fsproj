@@ -7,10 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="units\mass.fs" />
+    <Compile Include="units\Mass.fs" />
     <Compile Include="formulas\BakersHydration.fs" />
     <Compile Include="models\Bread.fs" />
-    <Compile Include="models\Ingredients.fs" />
+    <Compile Include="models\Recipe.fs" />
     <Compile Include="abstractions\IBreadRepository.fs" />
   </ItemGroup>
 

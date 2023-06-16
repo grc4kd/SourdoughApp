@@ -27,9 +27,7 @@ namespace api.Controllers
         public IEnumerable<SourdoughStarterMix> Get()
         {
             var rng = new Random();
-            _logger.LogDebug("Seeded random number generator {rng}", rng);
-
-            
+            _logger.LogDebug("Seeded random number generator {rng}", rng);             
 
             return Enumerable.Range(1, 100).Select(index => new SourdoughStarterMix
             {

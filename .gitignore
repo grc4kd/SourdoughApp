@@ -13,8 +13,6 @@
 api/.config
 api/bin
 api/obj
-domain/bin
-domain/obj
 TestResults/
 tests_api/bin
 tests_api/obj

@@ -11,12 +11,10 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     defaults:
       run:
-        shell: bash
-        working-directory: client-app
+        working-directory: ./client-app
         
     strategy:
       matrix:

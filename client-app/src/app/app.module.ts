@@ -9,26 +9,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HydrationComponent } from './hydration/hydration.component';
-import { IngredientsTableComponent } from './ingredients-table/ingredients-table.component';
-import { NavComponent } from './nav/nav.component';
-import { StandardRecipeComponent } from './standard-recipe/standard-recipe.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HydrationComponent,
-    IngredientsTableComponent,
-    NavComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    StandardRecipeComponent,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
@@ -37,6 +28,7 @@ import { StandardRecipeComponent } from './standard-recipe/standard-recipe.compo
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatButtonToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

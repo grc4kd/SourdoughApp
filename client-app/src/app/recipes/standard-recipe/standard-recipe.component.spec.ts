@@ -6,11 +6,10 @@ describe('StandardRecipeComponent', () => {
   let component: StandardRecipeComponent;
   let fixture: ComponentFixture<StandardRecipeComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [StandardRecipeComponent],
-    }).compileComponents();
-
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [StandardRecipeComponent]
+    });
     fixture = TestBed.createComponent(StandardRecipeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

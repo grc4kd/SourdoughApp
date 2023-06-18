@@ -1,3 +1,18 @@
-<app-nav>
-  <app-ingredients-table></app-ingredients-table>
-</app-nav>
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="menu-icon"
+    aria-label="main menu-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{ title }}</span>
+  <mat-button-toggle-group name="appFeature" aria-label="App Feature">
+    <mat-button-toggle value="home" routerLink="">Home</mat-button-toggle>
+    <mat-button-toggle value="recipes" routerLink="recipes"
+      >Recipes</mat-button-toggle
+    >
+    <mat-button-toggle value="about">About</mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-toolbar>
+<router-outlet></router-outlet>

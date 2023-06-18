@@ -29,4 +29,4 @@ jobs:
         cache-dependency-path: 'client-app/package-lock.json'
     - run: npm install
     - run: npm run build --if-present
-    - run: npm test -- --no-watch --no-progress
+    - run: npm test -- --browsers ChromeHeadless --no-watch --no-progress

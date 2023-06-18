@@ -1,12 +1,25 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {
+  MatButtonToggle,
+  MatButtonToggleGroup,
+  MatButtonToggleModule,
+} from '@angular/material/button-toggle';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatIcon } from '@angular/material/icon';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [AppComponent],
+      imports: [RouterTestingModule, MatButtonToggleModule],
+      declarations: [
+        AppComponent,
+        MatButtonToggleGroup,
+        MatButtonToggle,
+        MatToolbar,
+        MatIcon,
+      ],
     }).compileComponents();
   });
 
@@ -19,13 +32,14 @@ describe('AppComponent', () => {
   it(`should have as title 'client-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('client-app');
+    expect(app.title).toEqual('BREADCO');
   });
 
-  it('should render title', () => {
+  it('should render title', async () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('client-app');
+    const appTitleText = compiled.querySelector('.app-label')?.textContent;
+    expect(appTitleText).toContain('BREADCO');
   });
 });

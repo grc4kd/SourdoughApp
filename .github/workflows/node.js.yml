@@ -13,8 +13,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./client-app
+    defaults:
+      run:
+        shell: bash
+        working-directory: client-app
         
     strategy:
       matrix:

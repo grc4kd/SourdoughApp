@@ -37,12 +37,12 @@ let NewStarterTest () =
     Assert.AreEqual(1, Recipe.NewStarter 100.0 100.0)
 
 (*
-Example Recipe
+Example Recipe (EXTREMEly salty)
 Ingredients for two large loaves: 
   420 g active sourdough starter with 100% hydration made
   730 g bread flour, 225 g all-purpose flour
   620 g water + 40g to be added when you put
-  10 g salt to add when you make the folds (but look at your dough before you add it); 20 grams of sea salt. 
+  100 g salt to add when you make the folds (but look at your dough before you add it); 20 grams of sea salt. 
   In total hydration was about 85%.
 *)
 [<Test>]
@@ -50,7 +50,7 @@ let ExtremeComponentTest () =
     let starter = 420.0<g>
     let starterHydration = 1.00 // with 100% hydration
     let desiredHydration = 0.86254295532646053 // total hydration was about 85%
-    let desiredMass = 420.0<g> + 730.0<g> + 225.0<g> + 620.0<g> + 40.0<g> + 10.0<g> + 20.0<g>
+    let desiredMass = 420.0<g> + 730.0<g> + 225.0<g> + 620.0<g> + 40.0<g> + 100.0<g> + 20.0<g>
 
     // constant for salt, 90.90909% of total mass / 100 g
 
@@ -59,7 +59,7 @@ let ExtremeComponentTest () =
 
     // 620 + 40
     Assert.That(testIngredientsActual.Water, Is.EqualTo(787.97970479704782))
-    // 700 + 150 + 10
+    // 700 + 150 + 100
     Assert.That(testIngredientsActual.Flour, Is.EqualTo(947.02029520295207))
 
 [<Test>]

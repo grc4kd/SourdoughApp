@@ -9,9 +9,9 @@ namespace webapi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly IValuesService _valuesService;
+        private readonly ValuesService _valuesService;
 
-        public ValuesController(IValuesService valuesService)
+        public ValuesController(ValuesService valuesService)
         {
             _valuesService = valuesService;
         }
@@ -25,7 +25,7 @@ namespace webapi.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id) 
+        public string Get(int id)
         {
             return _valuesService.Find(id);
         }

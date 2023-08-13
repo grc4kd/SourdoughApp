@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace webapi.Services
 {
-    public class ValuesService : IValuesService
+    public class ValuesService
     {
         private readonly ILogger<ValuesService> _logger;
 

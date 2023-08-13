@@ -9,7 +9,6 @@ namespace api
         protected override void Load(ContainerBuilder builder)
         {
             builder.Register(c => new ValuesService(c.Resolve<ILogger<ValuesService>>()))
-                .As<IValuesService>()
                 .InstancePerLifetimeScope();
         }
     }

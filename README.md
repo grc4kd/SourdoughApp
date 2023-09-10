@@ -7,7 +7,7 @@ into account the experience for the user baking bread.
 
 << FUTURE BUILD >>
 In addition to calculations that assist with interpreting the hydration and composition of bread recipes, I hope that this app could generate a "boilerplate" 
-bread recipe of high enough quality to share on social media or print out and frame on the fridge with a magnet. * We should have fridge magnets! *
+bread recipe of high enough quality to share on social media or print out and put in a recipe book someday.
 
 # Changes
 - 2022-02-01 

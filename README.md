@@ -16,3 +16,4 @@ bread recipe of high enough quality to share on social media or print out and pu
 
 # GitHub Workflow CI Status
 [![.NET](https://github.com/grc4kd/SourdoughApp/actions/workflows/dotnet.yml/badge.svg)](https://github.com/grc4kd/SourdoughApp/actions/workflows/dotnet.yml)
+[![Node.js CI](https://github.com/grc4kd/SourdoughApp/actions/workflows/node.js.yml/badge.svg)](https://github.com/grc4kd/SourdoughApp/actions/workflows/node.js.yml)

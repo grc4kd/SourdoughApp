@@ -13,3 +13,6 @@ bread recipe of high enough quality to share on social media or print out and pu
 - 2022-02-01 
   + TODO: added branch tdd
     - to redevelop this application using TDD there are tests, but I didn't write them first breadmaking might be trivial, but this example is contrived
+
+# GitHub Workflow CI Status
+[![.NET](https://github.com/grc4kd/SourdoughApp/actions/workflows/dotnet.yml/badge.svg)](https://github.com/grc4kd/SourdoughApp/actions/workflows/dotnet.yml)

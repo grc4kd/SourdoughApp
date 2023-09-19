@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using webapi.Services;
 
-namespace api
+namespace webapi
 {
     public class AutofacModule : Module
     {

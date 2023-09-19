@@ -1,17 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections;
 using System.Collections.Generic;
 using webapi.Services;
 
 namespace webapi.Controllers
 {
-    [Route("[controller]")]
+    [Route("webapi/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly ValuesService _valuesService;
+        private readonly IValuesService _valuesService;
 
-        public ValuesController(ValuesService valuesService)
+        public ValuesController(IValuesService valuesService)
         {
             _valuesService = valuesService;
         }

@@ -1,4 +1,4 @@
-using api.models;
+using webapi.models;
 
 namespace tests_api
 {

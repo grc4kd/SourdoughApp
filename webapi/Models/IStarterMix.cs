@@ -1,4 +1,4 @@
-﻿namespace api.models
+﻿namespace webapi.models
 {
     public interface IStarterMix
     {

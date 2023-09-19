@@ -1,4 +1,4 @@
-namespace api.models
+namespace webapi.models
 {
     public class SourdoughStarterMix : IStarterMix
     {
@@ -28,7 +28,8 @@ namespace api.models
         public int Volume { get; set; }
 
         private double temperatureC;
-        public double TemperatureC {
+        public double TemperatureC
+        {
             get
             {
                 return temperatureC;
@@ -44,7 +45,7 @@ namespace api.models
             return TemperatureC * 9 / 5 + 32;
         }
 
-        public string Status { get; set; }       
+        public string Status { get; set; }
     }
 
 }

@@ -1,11 +1,11 @@
-﻿using api.models;
+﻿using webapi.models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace api.Controllers
+namespace webapi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -27,7 +27,7 @@ namespace api.Controllers
         public IEnumerable<SourdoughStarterMix> Get()
         {
             var rng = new Random();
-            _logger.LogDebug("Seeded random number generator {rng}", rng);             
+            _logger.LogDebug("Seeded random number generator {rng}", rng);
 
             return Enumerable.Range(1, 100).Select(index => new SourdoughStarterMix
             {

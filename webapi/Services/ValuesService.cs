@@ -1,10 +1,9 @@
-﻿using Microsoft.Build.Framework;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 
 namespace webapi.Services
 {
-    public class ValuesService
+    public class ValuesService : IValuesService
     {
         private readonly ILogger<ValuesService> _logger;
 

@@ -9,8 +9,8 @@ namespace tests_api
         {
             var starterMix = new SourdoughStarterMix();
 
-            const double expectedTempC = 20f;
-            const double expectedTempF = 68f;
+            const double expectedTempC = 20;
+            const double expectedTempF = 68;
 
             starterMix.TemperatureC = expectedTempC;
 

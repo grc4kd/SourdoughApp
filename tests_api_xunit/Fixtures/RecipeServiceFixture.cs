@@ -11,7 +11,7 @@ public class RecipeServiceFixture
 
     public RecipeServiceFixture()
     {
-        ConnectionString = "Server=(localdb)\\mssqllocaldb;Database=BakingTestDb;Trusted_Connection=True;";
+        ConnectionString = @"Server=(localdb)\MSSQLLocalDB;Integrated Security=true;Database=BakingTestDb";
 
         lock (_lock)
         {

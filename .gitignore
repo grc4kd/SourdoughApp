@@ -13,8 +13,6 @@
 /TestResults/
 /tests_api/bin
 /tests_api/obj
-/tests_application/bin
-/tests_application/obj
 /tests_core/bin
 /tests_core/obj
 /tests_api_xunit/bin

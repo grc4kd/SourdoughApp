@@ -25,7 +25,7 @@ let PlainComponentsTest () =
     let desiredMass = 1000.0<g>
 
     let testIngredientsActual =
-        Recipe.Components starter starterHydration desiredHydration desiredMass
+        Bread.Components starter starterHydration desiredHydration desiredMass
 
     Assert.That(testIngredientsActual.Starter, Is.EqualTo(289))
     Assert.That(testIngredientsActual.Water, Is.EqualTo(260.261904).Within(0.000001))
@@ -34,7 +34,7 @@ let PlainComponentsTest () =
 
 [<Test>]
 let NewStarterTest () =
-    Assert.AreEqual(1, Recipe.NewStarter 100.0 100.0)
+    Assert.AreEqual(1, Bread.NewStarter 100.0 100.0)
 
 (*
 Example Recipe (EXTREMEly salty)
@@ -55,7 +55,7 @@ let ExtremeComponentTest () =
     // constant for salt, 90.90909% of total mass / 100 g
 
     let testIngredientsActual =
-        Recipe.Components starter starterHydration desiredHydration desiredMass
+        Bread.Components starter starterHydration desiredHydration desiredMass
 
     // 620 + 40
     Assert.That(testIngredientsActual.Water, Is.EqualTo(787.97970479704782))

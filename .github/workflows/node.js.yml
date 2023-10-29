@@ -6,9 +6,12 @@ name: Node.js CI
 on:
   push:
     branches: ["main"]
+    paths: 
+      - 'client-app/**'
   pull_request:
     branches: ["main"]
-
+    paths: 
+      - 'client-app/**'
 jobs:
   build:
     runs-on: ubuntu-latest

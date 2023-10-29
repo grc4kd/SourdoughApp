@@ -1,7 +1,6 @@
 using database;
 using database.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 public class RecipeServiceFixture
 {

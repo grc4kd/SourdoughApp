@@ -1,5 +1,4 @@
 ﻿using application.abstractions.messaging;
-using MediatR;
 
 namespace application.breads.commands.CreateBread
 {

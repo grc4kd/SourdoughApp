@@ -1,6 +1,4 @@
-using webapi.models;
 using webapi.Services;
-using Xunit.Sdk;
 
 namespace tests_api_xunit
 {

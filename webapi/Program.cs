@@ -1,9 +1,9 @@
+using database;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using System;
-using webapi.Controllers;
 using webapi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +20,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IValuesService, ValuesService>();
+builder.Services.AddSingleton<DbContextOptions<BakedRecipeContext>>();
+builder.Services.AddSingleton<BakedRecipeContext>();
+
+builder.Services.AddScoped<IRecipeService, RecipeService>();
 
 var app = builder.Build();
 

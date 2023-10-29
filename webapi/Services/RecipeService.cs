@@ -2,24 +2,23 @@ using System;
 using System.Linq;
 using database;
 
-namespace webapi.Services
+namespace webapi.Services;
+
+public class RecipeService : IRecipeService
 {
-    public class RecipeService
+    private readonly BakedRecipeContext _context;
+
+    public RecipeService(BakedRecipeContext context)
     {
-        private readonly BakedRecipeContext _context;
+        _context = context;
+    }
 
-        public RecipeService(BakedRecipeContext context)
-        {
-            _context = context;
-        }
+    public BakedRecipe ReadRecipe()
+    {
+        Console.WriteLine("Querying for a recipe");
 
-        public BakedRecipe ReadRecipe()
-        {
-            Console.WriteLine("Querying for a recipe");
-
-            return _context.Recipes
-                .OrderBy(r => r.BakedRecipeId)
-                .First();
-        }
+        return _context.Recipes
+            .OrderBy(r => r.BakedRecipeId)
+            .First();
     }
 }

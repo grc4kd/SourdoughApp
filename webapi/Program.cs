@@ -20,8 +20,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
-builder.Services.AddSingleton<DbContextOptions<BakedRecipeContext>>();
-builder.Services.AddSingleton<BakedRecipeContext>();
+builder.Services.AddSingleton<DbContextOptions<RecipeContext>>();
+builder.Services.AddSingleton<RecipeContext>();
 
 builder.Services.AddScoped<IRecipeService, RecipeService>();
 

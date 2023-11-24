@@ -10,7 +10,7 @@ using database;
 
 namespace database.Migrations
 {
-    [DbContext(typeof(BakedRecipeContext))]
+    [DbContext(typeof(RecipeContext))]
     [Migration("20231124012035_ReorganizeRecipeDataStructure")]
     partial class ReorganizeRecipeDataStructure
     {

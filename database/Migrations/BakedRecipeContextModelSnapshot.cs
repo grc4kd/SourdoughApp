@@ -9,7 +9,7 @@ using database;
 
 namespace database.Migrations
 {
-    [DbContext(typeof(BakedRecipeContext))]
+    [DbContext(typeof(RecipeContext))]
     partial class BakedRecipeContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

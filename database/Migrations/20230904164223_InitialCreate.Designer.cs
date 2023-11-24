@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace database.Migrations
 {
-    [DbContext(typeof(BakedRecipeContext))]
+    [DbContext(typeof(RecipeContext))]
     [Migration("20230904164223_InitialCreate")]
     partial class InitialCreate
     {

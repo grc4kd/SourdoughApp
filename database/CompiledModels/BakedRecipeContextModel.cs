@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace database.CompiledModels
 {
-    [DbContext(typeof(BakedRecipeContext))]
+    [DbContext(typeof(RecipeContext))]
     public partial class BakedRecipeContextModel : RuntimeModel
     {
         static BakedRecipeContextModel()

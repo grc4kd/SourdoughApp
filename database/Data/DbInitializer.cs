@@ -4,7 +4,7 @@ namespace database.Data
 {
     public static class DbInitializer
     {
-        public static void Initialize(BakedRecipeContext context)
+        public static void Initialize(RecipeContext context)
         {
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();

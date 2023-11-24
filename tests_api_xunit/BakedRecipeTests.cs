@@ -12,6 +12,7 @@ namespace tests_api_xunit
         public void Dispose()
         {
             Fixture.CreateContext().Dispose();
+            GC.SuppressFinalize(this);
         }
 
         [Fact]

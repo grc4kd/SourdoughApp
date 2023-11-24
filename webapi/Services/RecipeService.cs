@@ -7,9 +7,9 @@ namespace webapi.Services;
 
 public class RecipeService : IRecipeService
 {
-    private readonly BakedRecipeContext _context;
+    private readonly RecipeContext _context;
 
-    public RecipeService(BakedRecipeContext context)
+    public RecipeService(RecipeContext context)
     {
         _context = context;
     }

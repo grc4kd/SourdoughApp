@@ -26,9 +26,9 @@ public class RecipeServiceFixture
         }
     }
 
-    public BakedRecipeContext CreateContext()
-        => new BakedRecipeContext(
-            new DbContextOptionsBuilder<BakedRecipeContext>()
+    public RecipeContext CreateContext()
+        => new RecipeContext(
+            new DbContextOptionsBuilder<RecipeContext>()
                 .UseSqlServer(ConnectionString)
                 .Options);
 }

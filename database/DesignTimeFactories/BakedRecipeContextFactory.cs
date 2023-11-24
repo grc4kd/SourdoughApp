@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace database.DesignTimeFactories
 {
-    public class BakedRecipeContextFactory : IDesignTimeDbContextFactory<BakedRecipeContext>
+    public class BakedRecipeContextFactory : IDesignTimeDbContextFactory<RecipeContext>
     {
-        public BakedRecipeContext CreateDbContext(string[] args)
+        public RecipeContext CreateDbContext(string[] args)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<BakedRecipeContext>();
+            var optionsBuilder = new DbContextOptionsBuilder<RecipeContext>();
             optionsBuilder.UseSqlite("Data Source=recipe.db");
 
-            return new BakedRecipeContext(optionsBuilder.Options);
+            return new RecipeContext(optionsBuilder.Options);
         }
     }
 }

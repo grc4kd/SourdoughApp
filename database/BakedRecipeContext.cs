@@ -3,11 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace database;
 
-public class BakedRecipeContext : DbContext
+public class RecipeContext(DbContextOptions<RecipeContext> options) : DbContext(options)
 {
-    public BakedRecipeContext(DbContextOptions<BakedRecipeContext> options) : base(options)
-    {
-    }
-
     public DbSet<Recipe> Recipes { get; set; }
 }

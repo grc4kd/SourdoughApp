@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using database;
 using database.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace webapi.Services;
 
@@ -19,6 +20,8 @@ public class RecipeService : IRecipeService
         Console.WriteLine("Querying for a recipe");
 
         return _context.Recipes
+            .Include(r => r.Ingredients)
+            .Include(r => r.Steps)
             .OrderBy(r => r.Id)
             .First();
     }

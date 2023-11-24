@@ -17,16 +17,19 @@ namespace database.Data
             var oneCupFlour = new MeasuredIngredient()
             {
                 Measure = new Measure("cup", 1.0f),
-                Ingredient = new Ingredient(){Name = "flour"}
+                Ingredient = new Ingredient() { Name = "flour" }
             };
 
             var scantCupWater = new MeasuredIngredient()
             {
                 Measure = new Measure("cup", 0.90f),
-                Ingredient = new Ingredient(){Name = "water"}
+                Ingredient = new Ingredient() { Name = "water" }
             };
 
-            var recipe = new Recipe() { Ingredients = new[] { oneCupFlour, scantCupWater } };
+            var recipe = new Recipe() { 
+                Ingredients = new[] { oneCupFlour, scantCupWater }, 
+                Steps = new[] { new Step("mix flour and water together"), new Step("bake until toasted and cooked through") } 
+            };
 
             context.Add(recipe);
             context.SaveChanges();

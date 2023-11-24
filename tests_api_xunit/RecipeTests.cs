@@ -22,7 +22,13 @@ namespace tests_api_xunit
             var service = new RecipeService(context);
             var data = service.ReadRecipe();
 
-            Assert.False(data == null);
+            Assert.Multiple(
+                () => Assert.NotNull(data),
+                () => Assert.NotNull(data.Ingredients),
+                () => Assert.NotNull(data.Steps),
+                () => Assert.NotNull(data.Ingredients.First().Measure),
+                () => Assert.NotNull(data.Ingredients.First().Ingredient)
+            );
         }
 
     }

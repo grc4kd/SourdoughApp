@@ -1,3 +1,5 @@
+using database.Models;
+
 namespace database.Data
 {
     public static class DbInitializer
@@ -12,16 +14,21 @@ namespace database.Data
                 return; // db already seeded
             }
 
-            var recipes = new BakedRecipe[] {
-                new() {Ingredients=new Ingredient[]{
-                    new Ingredient{SubstanceName="flour"},
-                    new Ingredient{SubstanceName="water"},
-                    new Ingredient{SubstanceName="salt"},
-                    new Ingredient{SubstanceName="yeast"},
-                }}
+            var oneCupFlour = new MeasuredIngredient()
+            {
+                Measure = new Measure("cup", 1.0f),
+                Ingredient = new Ingredient(){Name = "flour"}
             };
 
-            context.AddRange(recipes);
+            var scantCupWater = new MeasuredIngredient()
+            {
+                Measure = new Measure("cup", 0.90f),
+                Ingredient = new Ingredient(){Name = "water"}
+            };
+
+            var recipe = new Recipe() { Ingredients = new[] { oneCupFlour, scantCupWater } };
+
+            context.Add(recipe);
             context.SaveChanges();
         }
     }

@@ -1,5 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+
+namespace database.Models;
+
 public class Ingredient
 {
-    public int IngredientId { get; set; }
-    public required string SubstanceName { get; set; }
+    public int Id { get; private set; }
+    public required string Name { get; set; }
 }

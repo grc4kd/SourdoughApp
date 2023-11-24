@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using database.Models;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 #pragma warning disable 219, 612, 618
@@ -57,8 +58,8 @@ namespace database.CompiledModels
                 runtimeForeignKey,
                 onDependent: false,
                 typeof(ICollection<Ingredient>),
-                propertyInfo: typeof(BakedRecipe).GetProperty("Ingredients", BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly),
-                fieldInfo: typeof(BakedRecipe).GetField("<Ingredients>k__BackingField", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly));
+                propertyInfo: typeof(Recipe).GetProperty("Ingredients", BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly),
+                fieldInfo: typeof(Recipe).GetField("<Ingredients>k__BackingField", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly));
 
             return runtimeForeignKey;
         }

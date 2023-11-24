@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using database;
+using database.Models;
 
 namespace webapi.Services;
 
@@ -13,12 +14,12 @@ public class RecipeService : IRecipeService
         _context = context;
     }
 
-    public BakedRecipe ReadRecipe()
+    public Recipe ReadRecipe()
     {
         Console.WriteLine("Querying for a recipe");
 
         return _context.Recipes
-            .OrderBy(r => r.BakedRecipeId)
+            .OrderBy(r => r.Id)
             .First();
     }
 }

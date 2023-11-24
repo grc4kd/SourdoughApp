@@ -1,5 +1,7 @@
+using database.Models;
+
 namespace webapi.Services;
 
 public interface IRecipeService {
-    public BakedRecipe ReadRecipe();
+    public Recipe ReadRecipe();
 }

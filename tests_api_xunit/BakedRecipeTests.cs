@@ -2,11 +2,11 @@ using webapi.Services;
 
 namespace tests_api_xunit
 {
-    public class BakedRecipeTests : IClassFixture<RecipeServiceFixture>, IDisposable
+    public class RecipeTests : IClassFixture<RecipeServiceFixture>, IDisposable
     {
         public RecipeServiceFixture Fixture { get; }
 
-        public BakedRecipeTests(RecipeServiceFixture fixture)
+        public RecipeTests(RecipeServiceFixture fixture)
         => Fixture = fixture;
 
         public void Dispose()

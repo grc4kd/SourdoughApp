@@ -1,6 +1,7 @@
 using database;
 using database.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 public class RecipeServiceFixture
 {
@@ -10,7 +11,11 @@ public class RecipeServiceFixture
 
     public RecipeServiceFixture()
     {
-        ConnectionString = @"Server=(localdb)\MSSQLLocalDB;Integrated Security=true;Database=BakingTestDb";
+        var configuration = new ConfigurationBuilder()
+            .AddUserSecrets<RecipeServiceFixture>()
+            .Build();
+
+        ConnectionString = configuration.GetConnectionString("RecipeDb") ?? throw new InvalidOperationException("User secret is missing for ConnectionString:RecipeDb");
 
         lock (_lock)
         {

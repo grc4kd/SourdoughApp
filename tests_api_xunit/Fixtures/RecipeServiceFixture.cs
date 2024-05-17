@@ -35,7 +35,8 @@ public class RecipeServiceFixture
                 { "Data Source", "localhost" },
                 { "User", "sa" },
                 { "Password", Environment.GetEnvironmentVariable("MSSQL_SA_PASSWORD") ?? string.Empty },
-                { "Initial Catalog", "RecipeDb" }
+                { "Initial Catalog", "RecipeDb" },
+                { "TrustServerCertificate", true}
             };
 
             ConnectionString = connectionBuilder.ConnectionString;

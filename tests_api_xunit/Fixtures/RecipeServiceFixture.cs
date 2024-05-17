@@ -1,7 +1,10 @@
+using System.Configuration;
 using database;
 using database.Data;
+using Microsoft.AspNetCore.Connections;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 
 public class RecipeServiceFixture
 {
@@ -15,7 +18,12 @@ public class RecipeServiceFixture
             .AddUserSecrets<RecipeServiceFixture>()
             .Build();
 
-        ConnectionString = configuration.GetConnectionString("RecipeDb") ?? throw new InvalidOperationException("User secret is missing for ConnectionString:RecipeDb");
+        ConnectionString = configuration.GetConnectionString("RecipeDb") ?? string.Empty;
+    
+        // fallback to LocalDb connection for testing on hosted runners
+        if (ConnectionString.IsNullOrEmpty()) {
+            ConnectionString = "Server=(localdb)\\mysqllocaldb;Database=BakingTestDb;Trusted_Connection=True;";
+        }
 
         lock (_lock)
         {

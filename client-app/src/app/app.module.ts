@@ -18,7 +18,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatButtonToggleModule,
     MatIconModule,
     MatToolbarModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     provideAnimationsAsync()

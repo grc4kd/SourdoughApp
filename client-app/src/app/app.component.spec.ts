@@ -1,9 +1,12 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HarnessLoader } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { MatButtonToggleHarness } from '@angular/material/button-toggle/testing';
 import { AppModule } from './app.module';
+import { Router } from '@angular/router';
 
+let fixture: ComponentFixture<AppComponent>;
 let loader: HarnessLoader;
 
 describe('AppComponent', () => {
@@ -14,7 +17,7 @@ describe('AppComponent', () => {
         AppComponent
       ],
     }).compileComponents();
-    const fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(AppComponent);
     loader = TestbedHarnessEnvironment.loader(fixture);
   });
 
@@ -34,7 +37,18 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    const appTitleText = compiled.querySelector('.app-label')?.textContent;
+    const appTitleText = compiled.querySelector('.app-header')?.textContent;
     expect(appTitleText).toContain('BREADCO');
+  });
+
+  it('should route to RecipesModule when clicking on the recipes button', async () => {
+    const recipeButton = await loader.getHarness(
+      MatButtonToggleHarness.with({text: 'Recipes'}));
+    
+    await recipeButton.toggle();
+
+    expect(TestBed.inject(Router).url)
+      .withContext('should nav to RecipesModule')
+      .toEqual('/recipes');
   });
 });

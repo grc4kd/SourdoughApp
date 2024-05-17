@@ -1,4 +1,5 @@
 using System.Configuration;
+using System.Data.Common;
 using database;
 using database.Data;
 using Microsoft.AspNetCore.Connections;
@@ -16,13 +17,28 @@ public class RecipeServiceFixture
     {
         var configuration = new ConfigurationBuilder()
             .AddUserSecrets<RecipeServiceFixture>()
+            .AddEnvironmentVariables()
             .Build();
 
         ConnectionString = configuration.GetConnectionString("RecipeDb") ?? string.Empty;
     
-        // fallback to LocalDb connection for testing on hosted runners
+        // fallback to environment variable for hosted runners
         if (ConnectionString.IsNullOrEmpty()) {
-            ConnectionString = "Server=(localdb)\\mysqllocaldb;Database=BakingTestDb;Trusted_Connection=True;";
+            var MSSQL_SA_PASSWORD = Environment.GetEnvironmentVariable("MSSQL_SA_PASSWORD");
+
+            if (MSSQL_SA_PASSWORD.IsNullOrEmpty()) {
+                throw new InvalidOperationException("There are no available configurations for SQL Server, cannot initialize test fixture.");
+            }
+
+            var connectionBuilder = new DbConnectionStringBuilder
+            {
+                { "Data Source", "localhost" },
+                { "User", "sa" },
+                { "Password", Environment.GetEnvironmentVariable("MSSQL_SA_PASSWORD") ?? string.Empty },
+                { "Initial Catalog", "RecipeDb" }
+            };
+
+            ConnectionString = connectionBuilder.ConnectionString;
         }
 
         lock (_lock)

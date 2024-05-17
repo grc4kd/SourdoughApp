@@ -12,6 +12,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: dotnet-build-env
     env:
       NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
       MSSQL_SA_PASSWORD: ${{ secrets.MSSQL_SA_PASSWORD }}

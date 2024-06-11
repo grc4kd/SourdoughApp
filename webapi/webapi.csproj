@@ -21,7 +21,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\core\domain\domain.fsproj" />
     <ProjectReference Include="..\database\database.csproj" />
+    <ProjectReference Include="..\core\core.csproj" />
   </ItemGroup>
 </Project>

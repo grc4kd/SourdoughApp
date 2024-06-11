@@ -24,20 +24,14 @@ namespace webapi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<SourdoughStarterMix> Get()
+        public IEnumerable<Starter> Get()
         {
             var rng = new Random();
             _logger.LogDebug("Seeded random number generator {rng}", rng);
 
-            return Enumerable.Range(1, 100).Select(index => new SourdoughStarterMix
-            {
-                Water = rng.Next(1, 100),
-                Flour = rng.Next(1, 100),
-                Volume = 200,
-                TemperatureC = rng.Next(-20, 55),
-                Status = Statuses[rng.Next(Statuses.Length)]
-            })
-            .ToArray();
+            return Enumerable.Range(1, 100)
+                .Select(index => new Starter(rng.Next(1, 100), rng.Next(1, 100)))
+                .ToArray();
         }
     }
 }

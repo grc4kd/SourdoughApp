@@ -4,40 +4,18 @@ namespace tests_api
 {
     public class Tests
     {
-        [Test]
-        public void GetStarterMix_TemperatureConstants()
+        [Fact]
+        public void StarterMix_SetIngredients_StarterTestFields()
         {
-            var starterMix = new SourdoughStarterMix();
-
-            const double expectedTempC = 20;
-            const double expectedTempF = 68;
-
-            starterMix.TemperatureC = expectedTempC;
-
-            var tempF = starterMix.TemperatureF();
-
-            Assert.Multiple(() =>
-            {
-                Assert.That(starterMix.TemperatureF(), Is.InstanceOf<double>());
-                Assert.That(starterMix.TemperatureF(), Is.EqualTo(expectedTempF));
-
-                Assert.That(starterMix.TemperatureC, Is.InstanceOf<double>());
-                Assert.That(starterMix.TemperatureC, Is.EqualTo(expectedTempC));
-            });
-        }
-
-        [Test]
-        public void StarterMix_SetMassUnderZero_NoEffect()
-        {
+            var expectedWater = 125;
+            var expectedFlour = 125;
             var expectedMass = 250;
-            var starterMix = new SourdoughStarterMix
-            {
-                Mass = expectedMass
-            };
+            var expectedHydration = 1;
 
-            starterMix.Mass = -123;
+            var starterMix = new Starter(expectedWater, expectedFlour);
 
-            Assert.That(starterMix.Mass, Is.EqualTo(expectedMass));
+            Assert.Equal(starterMix.Mass, expectedMass);
+            Assert.Equal(starterMix.Hydration, expectedHydration);
         }
     }
 }

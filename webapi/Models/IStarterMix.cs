@@ -1,11 +1,10 @@
 ﻿namespace webapi.models
 {
-    public interface IStarterMix
+    public interface IStarter
     {
-        public int Mass { get; set; }
-        public double TemperatureC { get; set; }
-        public int Volume { get; set; }
-        public double Hydration();
-        public double TemperatureF();
+        public double Water { get; }
+        public double Flour { get; }
+        public double Mass { get; }
+        public double Hydration { get; }
     }
 }

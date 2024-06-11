@@ -115,11 +115,6 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         }
       },
-      "FSharp.Core": {
-        "type": "Transitive",
-        "resolved": "7.0.300",
-        "contentHash": "8vvItREJ1l5lcp3vBCSJ1mFevVAhR48I34DuF/EoUa7o1KlFpQpagyuZkVYMAsHPIjdp47ZxM9sI4eqeXaeWkA=="
-      },
       "Humanizer": {
         "type": "Transitive",
         "resolved": "2.14.1",
@@ -1481,17 +1476,14 @@
           "System.Drawing.Common": "7.0.0"
         }
       },
+      "core": {
+        "type": "Project"
+      },
       "database": {
         "type": "Project",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "[8.0.0, )",
           "Microsoft.EntityFrameworkCore.Sqlite": "[8.0.0, )"
-        }
-      },
-      "domain": {
-        "type": "Project",
-        "dependencies": {
-          "FSharp.Core": "[7.0.300, )"
         }
       }
     }
